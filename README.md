@@ -119,6 +119,10 @@ The server will start with hot reloading enabled at `http://localhost:3000`.
 
 ISC
 
+## Author
+
+Sudip Das <dassudip.info@gmail.com>
+
 ## Contributing
 
 1. Fork the repository

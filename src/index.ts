@@ -45,6 +45,14 @@ app.get("/health", (req, res) => {
   });
 });
 
+app.get("/", (req, res) => {
+  res.status(200).json({
+    message: "Welcome to the API",
+    documentation: "https://example.com/docs",
+    version: "1.0.0",
+  });
+});
+
 // API routes
 app.use("/api/users", userRoutes);
 app.use("/api/products", productRoutes);

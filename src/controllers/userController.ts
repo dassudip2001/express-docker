@@ -17,7 +17,7 @@ export const registerUser = async (req: Request, res: Response) => {
     }
 
     const user = await User.create({ name, email, password, role });
-    const token = generateToken(user._id.toString());
+    const token = generateToken(user._id as string);
 
     res.status(201).json({
       success: true,
@@ -48,7 +48,7 @@ export const loginUser = async (req: Request, res: Response) => {
       return res.status(401).json({ message: "Invalid credentials" });
     }
 
-    const token = generateToken(user._id.toString());
+    const token = generateToken(user._id as string);
 
     res.json({
       success: true,
